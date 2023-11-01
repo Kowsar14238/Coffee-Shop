@@ -263,6 +263,12 @@ section{
 }
 
 /*** Top items Section ***/
+.topItems .top-items-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 15rem;
+}
 .topItems .boxContainer{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
@@ -399,6 +405,106 @@ section{
 
         /*****--- Menu Page ---*****/
 /*** Menu section part ***/
+/* Style the menu banner */
+.menu .menu-banner{
+    height: 60vh;
+    background: url(../images/menu-banner.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu .menu-banner h1{
+    width: 100%;
+    font-size: 8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--second-text-color);
+    background-color: rgba(111, 105, 105, 0.159);
+    backdrop-filter: blur(2rem);
+}
+
+/* Style the menu content container */
+.menu-content{
+    background: url(../images/menu-items-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    margin-right: 40rem;
+    margin-left: 40rem;
+    padding: 15rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(107, 152, 22, 0.587);
+}
+.menu-content .all-menu-items-head{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    border-bottom: #13131a .2rem solid;
+}
+/* Style menu item headings */
+.all-menu-items-head h5 {
+    font-size: 2rem;
+    color: var(--black-color);
+}
+
+.all-menu-items-head p {
+    font-size: 1.6rem;
+    color: var(--black-color);
+}
+
+/* Style the sub-menu section */
+.all-items-menu{
+    display: block;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--black-color);;
+}
+
+.all-items-menu .all-items-sub-menu{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+/* Style individual menu items */
+.all-items-menu .all-items{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: .2rem dotted var(--second-color);
+}
+.all-items-menu .all-items span{
+    font-size: 2rem;
+}
+.all-items-menu .all-items-sub-menu span{
+    border-bottom: .18rem solid var(--bg-color);
+}
+
+/* Apply different styles for regular and large items */
+.all-items:last-child {
+    border-bottom: none;
+}
+
+/* Add spacing between menu sections */
+.menu-content + .menu-content {
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
 
 
 
