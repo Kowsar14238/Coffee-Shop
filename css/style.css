@@ -298,6 +298,7 @@ section{
     color: var(--text-color);
     font-size: 1.5rem;
     text-decoration: line-through;
+    font-weight: lighter;
 }
 .topItems .boxContainer .box:hover{
     background: var(--hover-color);
@@ -426,7 +427,7 @@ section{
     backdrop-filter: blur(2rem);
 }
 
-/* Style the menu content container */
+/* Style the menu content*/
 .menu-content{
     background: url(../images/menu-items-bg.jpg) no-repeat;
     background-size: cover;
@@ -498,10 +499,68 @@ section{
     margin-top: 2rem;
 }
 
-
-
-
-
+        /*****--- Products Page ---*****/
+/*** Products section part ***/
+.products{
+    margin: 5rem 12rem;
+}
+.products .boxContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(53rem, 1fr));
+    gap: 5rem;
+}
+.products .boxContainer .box{
+    text-align: center;
+    border: var(--border);
+    border-radius: 5%;
+    padding: 2rem;
+}
+.products .boxContainer .box .icons span{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    size: 2rem;
+    border: var(--border);
+    color: var(--hover-color);
+    background-color: var(--second-color);
+    margin: .3rem;
+}
+.products .boxContainer .box .icons span:hover{
+    background: var(--text-color);
+    color: var(--black-color);
+    cursor: pointer;
+}
+.products .boxContainer .box .image{
+    padding: 2.5rem 0;
+}
+.products .boxContainer .box .image img{
+    height: 35rem;
+}
+.products .boxContainer .box .content h3{
+    color: var(--text-color);
+    font-size: 2.5rem;
+}
+.products .boxContainer .box .stars{
+    padding: 1.5rem;
+}
+.products .boxContainer .box .stars span{
+    font-size: 1.9rem;
+    color: var(--main-color);
+}
+.products .boxContainer .box .content .price{
+    color: var(--text-color);
+    font-size: 2.5rem;
+}
+.products .boxContainer .box .content .price span{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+.products .boxContainer .box:hover{
+    background: var(--hover-color);
+    padding: 8%;
+}
 
 
 
