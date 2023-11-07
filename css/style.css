@@ -501,15 +501,19 @@ section{
 
         /*****--- Products Page ---*****/
 /*** Products section part ***/
-.products{
+.products, .blogs{
     margin: 5rem 12rem;
 }
-.products .boxContainer{
+.products .heading, .blogs .heading{
+    margin-top: 6rem;
+}
+.products .boxContainer, .blogs .boxContainer{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(53rem, 1fr));
     gap: 5rem;
 }
 .products .boxContainer .box{
+    height: 50rem;
     text-align: center;
     border: var(--border);
     border-radius: 5%;
@@ -534,14 +538,14 @@ section{
     padding: 2.5rem 0;
 }
 .products .boxContainer .box .image img{
-    height: 35rem;
+    height: 25rem;
 }
 .products .boxContainer .box .content h3{
     color: var(--text-color);
-    font-size: 2.5rem;
+    font-size: 2.1rem;
 }
 .products .boxContainer .box .stars{
-    padding: 1.5rem;
+    padding: 1.1rem;
 }
 .products .boxContainer .box .stars span{
     font-size: 1.9rem;
@@ -553,13 +557,33 @@ section{
 }
 .products .boxContainer .box .content .price span{
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-decoration: line-through;
     font-weight: lighter;
 }
 .products .boxContainer .box:hover{
     background: var(--hover-color);
-    padding: 8%;
+    transform: translateY(-2rem);
+    cursor: pointer;
+}
+.products .boxContainer .box:hover .content{
+    background: var(--black-color) !important;
+}
+
+        /*****--- Blogs Page ---*****/
+/*** Blogs section part ***/
+.blogs .boxContainer .box{
+    border: var(--border);
+}
+.blogs .boxContainer .box .image{
+    height: 50rem;
+    overflow: hidden;
+    width: 100%;
+}
+.blogs .boxContainer .box .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
 }
 
 
@@ -572,9 +596,7 @@ section{
 
 
 
-
-
-/** media queries **/
+/** media queries max-width:991px**/
 @media(max-width:991px){
 
     html{
@@ -587,6 +609,8 @@ section{
         padding: 2rem;
     }
 }
+
+/** media queries max-width:768px**/
 @media(max-width:768px){
 
     #menuBtn{
@@ -626,6 +650,8 @@ section{
     }
 
 }
+
+/** media queries max-width:450px**/
 @media(max-width:450px){
 
     html{
