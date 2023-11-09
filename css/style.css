@@ -12,7 +12,7 @@
     --second-text-color: #716f6f;
     --border: .1rem solid rgba(255, 255, 255, 0.3);
 }
-*, .menu, .products, .blogs{
+*{
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -73,7 +73,7 @@ section{
     margin-top: 1rem;
     display: inline-block;
     padding: .9rem 3rem;
-    font-size: 1.7rem;
+    font-size: 2rem;
     color: var(--text-color);
     background: var(--second-btn-color);
     cursor: pointer;
@@ -82,7 +82,10 @@ section{
 .second-btn:hover{
     letter-spacing: .2rem;
 }
-
+.second-btn span{
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
         /*****--- Header part ---*****/
 .header{
     background: var(--second-color);
@@ -210,7 +213,7 @@ section{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(../images/banner.jpg) no-repeat;
+    background: url(../images/home-banner.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -275,6 +278,7 @@ section{
     gap: 1.5rem;
 }
 .topItems .boxContainer .box{
+    background-color: var(--second-color);
     padding: 5rem;
     text-align: center;
     border: var(--border);
@@ -404,30 +408,39 @@ section{
     font-size: 3rem;
 }
 
-        /*****--- Menu Page ---*****/
-/*** Menu section part ***/
-/* Style the menu banner */
+
+        /*****--- For all pages without index page ---*****/
+/* Style the menu, .products, .blogs, .contact pages banner */
+.menu, .products, .blogs, .contact{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 .top-banner{
     height: 60vh;
-    background: url(../images/menu-banner.jpg) no-repeat;
+    width: 100vw;
+    background-repeat:no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: relative;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: .5%;
 }
 .top-banner h1{
-    width: 100%;
+    position: absolute;/*if we set position: relative; then the text will be automatically going center and the background will be full*/
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 8rem;
     font-weight: bold;
     text-transform: uppercase;
     color: var(--text-color);
     background-color: rgba(7, 1, 1, 0.424);
     backdrop-filter: blur(2rem);
+    padding: 2rem 10rem;
 }
 
+        /*****--- Menu Page ---*****/
+/*** Menu section part ***/
 /* Style the menu content*/
 .menu-content{
     background: url(../images/menu-items-bg.jpg) no-repeat;
@@ -511,6 +524,7 @@ section{
     gap: 5rem;
 }
 .products .boxContainer .box{
+    background-color: var(--second-color);
     height: 50rem;
     text-align: center;
     border: var(--border);
@@ -571,6 +585,7 @@ section{
         /*****--- Blogs Page ---*****/
 /*** Blogs section part ***/
 .blogs .boxContainer .box{
+    background-color: var(--second-color);
     border: var(--border);
 }
 .blogs .boxContainer .box .image{
@@ -616,11 +631,59 @@ section{
     gap: .7rem;
     width: fit-content;
 }
+.blog-btn span{
+    color: var(--text-color) !important;
+    font-size: 1.3rem !important;
+}
 
-
-
-
-
+        /*****--- Contact Page ---*****/
+/*** Contact section part ***/
+.row{
+    overflow: hidden;
+    margin: 4rem 2rem;
+}
+.contact .row{
+    display: flex;
+    background: var(--second-color);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.contact .row .map{
+    flex: 1 1 45rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 5rem 0rem;
+    text-align: center;
+}
+.contact .row form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: var(--text-color);
+}
+.contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin: 2rem 3rem;
+    background: var(--black-color);
+    border: var(--border);
+}
+.contact .row form .inputBox span{
+    color: var(--text-color);
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+.contact .row form .inputBox input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: var(--text-color);
+    text-transform: none;
+    background: none;
+}
 
 
 
@@ -641,6 +704,14 @@ section{
     section{
         padding: 2rem;
     }
+
+    /* Style the menu, .products, .blogs, .contact pages banner */
+    .top-banner h1{
+        font-size: 4.5rem;
+    }
+
+    /* Style blogs page */
+
 }
 
 /** media queries max-width:768px**/
@@ -681,6 +752,20 @@ section{
     .home .content p{
         font-size: 1.5rem;
     }
+    .top-items-button .second-btn{
+        margin: 0rem -5rem;
+        font-size: 1.4rem;
+    }
+    .top-items-button .second-btn span{
+        font-size: 1rem;
+    }
+
+    /* Style the menu, .products, .blogs, .contact pages banner */
+    .top-banner h1{
+        font-size: 2.8rem;
+    }
+
+    /* Style blogs page */
 
 }
 
@@ -690,6 +775,26 @@ section{
     html{
         font-size: 50%;
     }
+
+    /* Style products page */
+    .products .boxContainer{
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+    .products .boxContainer .box .image{
+        overflow: hidden;
+    }
+    
+    /* Style blogs page */
+    .blogs .boxContainer{
+        grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    }    
+    .blogs .boxContainer .box .image{
+        overflow: hidden;
+    }
+    .blogs .boxContainer .box .image img{
+        width: 40rem;
+    }
+
 }
 
 
