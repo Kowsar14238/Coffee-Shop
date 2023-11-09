@@ -443,24 +443,23 @@ section{
 /*** Menu section part ***/
 /* Style the menu content*/
 .menu-content{
-    background: url(../images/menu-items-bg.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
-    margin-right: 40rem;
-    margin-left: 40rem;
-    padding: 15rem;
+    background-color: #c8a377;
+    text-align: center;
+    border-radius: .5%;
+    margin: 10rem 40rem;
+    padding: 5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(107, 152, 22, 0.587);
 }
 .menu-content .all-menu-items-head{
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
-    border-bottom: #13131a .2rem solid;
+    border-bottom: var(--black-color) .3rem solid;
 }
 /* Style menu item headings */
+.all-menu-items-head{
+    margin: 6rem 3rem;
+}
 .all-menu-items-head h5 {
     font-size: 2rem;
     color: var(--black-color);
@@ -470,48 +469,37 @@ section{
     font-size: 1.6rem;
     color: var(--black-color);
 }
-
-/* Style the sub-menu section */
-.all-items-menu{
-    display: block;
-    justify-content: space-between;
-    margin-top: 1rem;
-    font-weight: bold;
-    color: var(--black-color);;
+.all-menu-items{
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
-.all-items-menu .all-items-sub-menu{
-    display: flex;
-    justify-content: space-between;
+.all-menu-items tr th{
+    padding: 1rem 0rem;
+    font-size: 2.3rem;
+    color: var(--text-color);
+    background-color: var(--second-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: .8rem;
+}
+.all-menu-items tr td {
     padding-top: 3rem;
     padding-bottom: 1.5rem;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-}
-
-/* Style individual menu items */
-.all-items-menu .all-items{
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-    border-bottom: .2rem dotted var(--second-color);
-}
-.all-items-menu .all-items span{
     font-size: 2rem;
+    text-transform: capitalize;
+    text-align: left;
+    padding-left: .8rem;
+    border-bottom: .15rem solid var(--second-color);
 }
-.all-items-menu .all-items-sub-menu span{
-    border-bottom: .18rem solid var(--bg-color);
+.all-menu-items tr:hover {
+    background-color: var(--hover-color);
 }
 
-/* Apply different styles for regular and large items */
-.all-items:last-child {
-    border-bottom: none;
-}
-
-/* Add spacing between menu sections */
-.menu-content + .menu-content {
-    margin-top: 2rem;
-}
 
         /*****--- Products Page ---*****/
 /*** Products section part ***/
@@ -711,7 +699,9 @@ section{
     }
 
     /* Style blogs page */
-
+    .menu-content{
+        margin: 10rem !important;
+    }
 }
 
 /** media queries max-width:768px**/
@@ -765,8 +755,19 @@ section{
         font-size: 2.8rem;
     }
 
-    /* Style blogs page */
+    /* Style menu page */
+    .all-menu-items tr th{
+        font-size: 2rem;
+    }
+    .all-menu-items tr td{
+        font-size: 1.6rem;
+    }
 
+    /* Style blogs page */
+    .menu-content{
+        margin: 10rem !important;
+    }
+    
 }
 
 /** media queries max-width:450px**/
@@ -774,6 +775,17 @@ section{
 
     html{
         font-size: 50%;
+    }
+    
+    /* Style menu page */
+    .menu-content{
+        margin: 10rem 0rem !important;
+    }
+    .all-menu-items tr th{
+        font-size: 1.5rem;
+    }
+    .all-menu-items tr td{
+        font-size: 1.3rem;
     }
 
     /* Style products page */
